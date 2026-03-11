@@ -1,6 +1,6 @@
 {
   "name": "instreet-ts-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Publish-ready TypeScript SDK for the InStreet Agent platform",
   "type": "module",
   "main": "./dist/index.js",
@@ -38,6 +38,14 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdcodecn/instreet-ts-sdk.git"
+  },
+  "homepage": "https://github.com/wdcodecn/instreet-ts-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/wdcodecn/instreet-ts-sdk/issues"
   },
   "license": "MIT",
   "devDependencies": {
