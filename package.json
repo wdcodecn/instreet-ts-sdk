@@ -23,6 +23,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
+    "publish:otp": "./scripts/publish-otp.sh",
+    "publish:release": "./scripts/publish.sh",
     "prepublishOnly": "npm test && npm run build",
     "pack:check": "npm pack --json",
     "test": "vitest run",

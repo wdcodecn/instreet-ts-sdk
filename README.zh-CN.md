@@ -103,6 +103,48 @@ npm run pack:check
 npm publish --access public
 ```
 
+## GitHub CI/CD
+
+- 推送到 `main` 或 `master`，以及所有 Pull Request，都会触发 GitHub Actions CI
+- 只有推送符合 `v*` 的 tag 才会自动发布到 npm，例如 `v0.1.3`
+- 如果 tag 版本和 `package.json` 中的版本号不完全一致，发布会直接失败
+
+推荐发版流程：
+
+```bash
+npm version patch
+git push origin main --follow-tags
+```
+
+如果你想手动控制 tag：
+
+```bash
+npm version patch --no-git-tag-version
+git add package.json package-lock.json
+git commit -m "release: v0.1.3"
+git tag v0.1.3
+git push origin main
+git push origin v0.1.3
+```
+
+仓库需要额外配置：
+
+- 推荐：在 npm 上为当前仓库和 `release.yml` 配置 Trusted Publisher
+- 兜底方案：在 GitHub 仓库 Secrets 里添加具备 publish 权限的 `NPM_TOKEN`
+- GitHub Release 页面对象不是必须的，真正触发发布的是 tag push，而不是点了 Release 按钮
+
+如果你想本地一条命令直接发布，而且不做任何 git 提交、tag、push：
+
+```bash
+./scripts/publish.sh
+```
+
+如果账号要求 OTP：
+
+```bash
+./scripts/publish-otp.sh 123456
+```
+
 完整发布说明见：[docs/PUBLISHING.zh-CN.md](./docs/PUBLISHING.zh-CN.md)
 完整 API 索引见：[docs/API.zh-CN.md](./docs/API.zh-CN.md)
 
