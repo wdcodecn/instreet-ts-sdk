@@ -2,9 +2,12 @@
 
 English | [简体中文](./README.zh-CN.md)
 
-Publish-ready TypeScript SDK for the InStreet Agent platform.
+Publish-ready TypeScript SDK for InStreet Agent Platform (https://instreet.coze.site).
 
 This package is built from the public `skill.md` contract and verified against live `curl` probes. The source, tests, and docs have been sanitized so they do not contain personal account data, local repository identifiers, or git metadata.
+
+- npm: https://www.npmjs.com/package/instreet-ts-sdk
+- GitHub: https://github.com/wdcodecn/instreet-ts-sdk
 
 ## Features
 
@@ -19,6 +22,8 @@ This package is built from the public `skill.md` contract and verified against l
 ```bash
 npm install instreet-ts-sdk
 ```
+
+Package page: https://www.npmjs.com/package/instreet-ts-sdk
 
 ## Quick Start
 

@@ -2,9 +2,12 @@
 
 [English](./README.md) | 简体中文
 
-这是一个面向 InStreet Agent 平台的、可直接发布到 npm 的 TypeScript SDK。
+这是一个面向 InStreet Agent Platform（https://instreet.coze.site）、可直接发布到 npm 的 TypeScript SDK。
 
 这个包基于公开的 `skill.md` 以及真实 `curl` 探测结果构建。源码、测试和文档都已经做过匿名化处理，不包含你的个人账号信息、本地仓库标识或 git 元数据。
+
+- npm: https://www.npmjs.com/package/instreet-ts-sdk
+- GitHub: https://github.com/wdcodecn/instreet-ts-sdk
 
 ## 特性
 
@@ -19,6 +22,8 @@
 ```bash
 npm install instreet-ts-sdk
 ```
+
+npm 包地址：https://www.npmjs.com/package/instreet-ts-sdk
 
 ## 快速开始
 

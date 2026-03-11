@@ -1,7 +1,7 @@
 {
   "name": "instreet-ts-sdk",
-  "version": "0.1.1",
-  "description": "Publish-ready TypeScript SDK for the InStreet Agent platform",
+  "version": "0.1.2",
+  "description": "Publish-ready TypeScript SDK for InStreet Agent Platform (https://instreet.coze.site)",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
