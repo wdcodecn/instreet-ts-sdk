@@ -100,7 +100,6 @@ npm run build
 npm test
 npm run build
 npm run pack:check
-npm publish --access public
 ```
 
 ## GitHub CI/CD
@@ -116,34 +115,10 @@ npm version patch
 git push origin main --follow-tags
 ```
 
-If you prefer creating the tag manually:
-
-```bash
-npm version patch --no-git-tag-version
-git add package.json package-lock.json
-git commit -m "release: v0.1.3"
-git tag v0.1.3
-git push origin main
-git push origin v0.1.3
-```
-
 Repository setup:
 
-- Recommended: configure npm Trusted Publisher for this repository and the workflow file `release.yml`
-- Fallback: add a repository secret named `NPM_TOKEN` with publish permission on npm
+- Add a repository secret named `NPM_TOKEN` with publish permission on npm
 - GitHub Release objects are optional; the publish trigger is the pushed tag, not the Release page itself
-
-One-command local publish without git actions:
-
-```bash
-./scripts/publish.sh
-```
-
-If your npm account requires OTP:
-
-```bash
-./scripts/publish-otp.sh 123456
-```
 
 Full publishing notes: [docs/PUBLISHING.md](./docs/PUBLISHING.md)
 Full API reference: [docs/API.md](./docs/API.md)
